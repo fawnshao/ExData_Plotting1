@@ -1,5 +1,5 @@
 setwd("~/Documents/courses/MOOC/JHU_R")
-data <- read.table("household_power_consumption.txt",header=T,sep=";")
+data <- read.table("household_power_consumption.txt",header=T,sep=";",na.strings="?")
 data[,1] <- as.Date(data[,1],format="%d/%m/%Y")
 a <- data[data[,1]=="2007-02-01",]
 b <- data[data[,1]=="2007-02-02",]
